@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Cryptograms</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Bootstrap Icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Font Awesome Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+  <!-- SimpleLightbox plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+        rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- DataTables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+
+</head>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand" href="#page-top">Cryptograms</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#keysTable">Find cryptograms</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://hcportal.eu">HC portal</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Masthead-->
+<header class="masthead" id="masthead-cipher">
+  <div class="container px-4 px-lg-5 h-100">
+    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-8 align-self-end">
+        <h1 class="text-white font-weight-bold">Welcome to the database of cryptograms</h1>
+        <hr class="divider" />
+      </div>
+      <div class="col-lg-8 align-self-baseline">
+        <p class="text-white-75 mb-5">Our database contains cryptograms with detailed information.
+          You can contribute to our database by adding more cryptograms after registration.</p>
+        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About-->
+<section class="page-section bg-primary" id="about">
+  <div class="container px-4 px-lg-5">
+    <h2 class="text-white text-center mt-0">About</h2>
+    <hr class="divider divider-light"/>
+    <div class="row gx-4 gx-lg-5 py-3">
+      <div class="col text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi bi-envelope fs-1 text-white"></i></div>
+          <h3 class="text-white h4 mb-2">491 cryptograms</h3>
+          <p class="text-white-75 text-muted mb-0">Our complete database contains 491 cryptograms.</p>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi bi-translate fs-1 text-white"></i></div>
+          <h3 class="text-white h4 mb-2">9 languages</h3>
+          <p class="text-white-75 text-muted mb-0">Solved cryptograms cover 9 different languages.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row py-3 gx-4 gx-lg-5">
+      <div class="col text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi bi-envelope-check fs-1 text-white"></i></div>
+          <h3 class="text-white h4 mb-2">109 solved cryptograms</h3>
+          <p class="text-white-75 text-muted mb-0">Out of all cryptograms in database, there are 109 solved ones.</p>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi bi-envelope-dash fs-1 text-white"></i></div>
+          <h3 class="text-white h4 mb-2">2 unsolved cryptograms</h3>
+          <p class="text-white-75 text-muted mb-0">Out of all cryptograms in database, there are 2 unsolved ones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--&lt;!&ndash; Cypher table&ndash;&gt;-->
+<!--<section class="page-section table-section" id="cypherTable">-->
+<!--  <div class="container px-4 px-lg-8">-->
+<!--    <div class="row align-items-center justify-content-center text-center">-->
+<!--      <div class="col-lg-8 align-self-end">-->
+<!--        <h1 class="font-weight-bold">All cryptograms</h1>-->
+<!--        <hr class="divider" />-->
+<!--      </div>-->
+<!--      <div class="col-lg-8 align-self-baseline py-5">-->
+<!--        <div class="table-responsive">-->
+<!--          <table id="keyTable" class="hover table table-sm">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--              <th scope="col" class="th-sm">-->
+<!--                <span class="fs-6 fw-light text-uppercase" >Signature</span>-->
+<!--              </th>-->
+<!--              <th scope="col" class="th-sm">-->
+<!--                <span class="fs-6 fw-light text-uppercase">Language </span>-->
+<!--              </th>-->
+<!--              <th scope="col" class="th-sm">-->
+<!--                <span class="fs-6 fw-light text-uppercase" >Signature</span>-->
+<!--              </th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <div class = "d-inline-flex align-items-center">-->
+<!--                  <div class="col-md-2 px-3">-->
+<!--                    <img src="assets/img/portfolio/thumbnails/2.jpg" alt="thumbnail1"-->
+<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
+<!--                  </div>-->
+<!--                  <div class="align-middle">-->
+<!--                    <a>hstam_4d_Nr_1218_Teil2_0303-0305</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </td>-->
+<!--              <td>Undefined</td>-->
+<!--              <td></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <div class = "d-inline-flex align-items-center">-->
+<!--                  <div class="col-md-2 px-3">-->
+<!--                    <img src="assets/img/portfolio/thumbnails/3.jpg" alt="thumbnail1"-->
+<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
+<!--                  </div>-->
+<!--                  <div class="align-middle">-->
+<!--                    <a>hstam_4d_Nr_1218_Teil2_0193-0214</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </td>-->
+<!--              <td>Undefined</td>-->
+<!--              <td>from 28.3.1642</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <div class = "d-inline-flex align-items-center">-->
+<!--                  <div class="col-md-2 px-3">-->
+<!--                    <img src="assets/img/portfolio/thumbnails/4.jpg" alt="thumbnail1"-->
+<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
+<!--                  </div>-->
+<!--                  <div class="align-middle">-->
+<!--                    <a>hstam_4d_Nr_1218_Teil1_0183-184</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </td>-->
+<!--              <td>French</td>-->
+<!--              <td>Row 1 Data 2</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--              <td>-->
+<!--                <div class = "d-inline-flex align-items-center">-->
+<!--                  <div class="col-md-2 px-3">-->
+<!--                    <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"-->
+<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
+<!--                  </div>-->
+<!--                  <div class="align-middle">-->
+<!--                    <a>hstam_4d_Nr_1218_Teil1_0068-0072</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </td>-->
+<!--              <td>Undefined</td>-->
+<!--              <td>May 1639</td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--            <tfoot>-->
+<!--            <tr>-->
+<!--              <th>signature</th>-->
+<!--              <th>language</th>-->
+<!--              <th>date</th>-->
+<!--            </tr>-->
+<!--            </tfoot>-->
+<!--          </table>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!-- Footer-->
+<footer class="mt-auto bg-light py-5">
+  <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - hcportal.eu</div></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

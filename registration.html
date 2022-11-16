@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Register</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+          rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+          rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+<section class="vh-100" style="background-color: #f8f9fa;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Registration</h3>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label d-flex justify-content-start" for="typeEmailX">Email address</label>
+                            <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label d-flex justify-content-start align-items-center" for="typePasswordX">Password</label>
+                            <div class="d-flex justify-content-start align-items-center">
+                                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                                <i class="bi bi-eye-slash togglePassword"  id="togglePassword"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label d-flex justify-content-start align-items-center" for="typePasswordX">Repeat password</label>
+                            <div class="d-flex justify-content-start align-items-center">
+                                <input type="password" id="typePasswordX2" class="form-control form-control-lg" />
+                                <i class="bi bi-eye-slash togglePassword" id="togglePassword2"></i>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg btn-block w-100" type="submit">Register</button>
+
+                        <hr class="my-4">
+                        <div class="form-outline mb-4 d-flex justify-content-between">
+                            <div>
+                                <a href="login.html">Login</a>
+                            </div>
+                            <div>
+                                <a href="index.html">Home</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            const togglePassword = document.querySelector("#togglePassword");
+                            const password = document.querySelector("#typePasswordX");
+                            const togglePassword2 = document.querySelector("#togglePassword2");
+                            const password2 = document.querySelector("#typePasswordX2");
+
+                            togglePassword.addEventListener("click", function () {
+                                // toggle the type attribute
+                                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                                password.setAttribute("type", type);
+
+                                // toggle the icon
+                                this.classList.toggle("bi-eye");
+                            });
+
+                            togglePassword2.addEventListener("click", function () {
+                                // toggle the type attribute
+                                const type = password2.getAttribute("type") === "password" ? "text" : "password";
+                                password2.setAttribute("type", type);
+
+                                // toggle the icon
+                                this.classList.toggle("bi-eye");
+                            });
+
+                            // prevent form submit
+                            const form = document.querySelector("form");
+                            form.addEventListener('submit', function (e) {
+                                e.preventDefault();
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<footer class="mt-auto bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - hcportal.eu</div></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
