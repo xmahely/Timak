@@ -7,61 +7,31 @@
 // Scripts
 //
 
+
 let editor;
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    //Datatables
-    // $('#keyTable').DataTable({
-    //     responsive: true,
-    //     select: true,
-    //     "pagingType": "simple_numbers"
-    // });
-
-    $('#keyTable tfoot th').each(function() {
-        let title = $(this).text();
-        $(this).html('<div class="d-flex justify-content-start align-items-center">' +
-            '<input type="text" class="form-control form-control-sm" placeholder="' + title + '" />' +
-            '<i class="bi bi-search"></i></div>');
-        // $(this).html('<i class="bi bi-search"></i>');
-    });
-
-    let table = $('#keyTable').DataTable({
-        responsive: true,
-        select: true,
-        "pagingType": "simple_numbers",
-        searchPanes: {
-            viewTotal: true,
-            i18n: {
-                count: '{total} found',
-                countFiltered: '{shown} ({total})'
-            }
-        },
-        dom: 'Plfrtip'
-    });
-
-    table.columns().every( function() {
-        let that = this;
-
-        $('input', this.footer()).on('keyup change', function() {
-            if (that.search() !== this.value) {
-                that
-                    .search(this.value)
-                    .draw();
-            }
-        });
-    });
-
     // Navbar shrink function
     let navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
+
+        let logos = document.getElementsByClassName('hc-logo');
         if (!navbarCollapsible) {
+            console.log("neniii");
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
+            for(let i = 0; i < logos.length; i++){
+                logos[i].classList.remove("logo-dark");
+            }
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            console.log('robim navbar')
+            navbarCollapsible.classList.add('navbar-shrink');
+            for(let i = 0; i < logos.length; i++){
+                logos[i].classList.add("logo-dark");
+            }
         }
 
     };
