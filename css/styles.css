@@ -3049,7 +3049,7 @@ textarea.form-control-lg {
   border-color: var(--bs-primary);
 }
 .btn-primary:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: var(--bs-primary-hover);
   border-color: var(--bs-primary);
 }

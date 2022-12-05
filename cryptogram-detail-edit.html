@@ -58,7 +58,7 @@
   <div class="container px-4 px-lg-4 w-75">
     <h2 class="text-center mt-0 text-primary py-5">MZV message No. 32/1944</h2>
     <div class="d-flex justify-content-end">
-      <button class="btn btn-danger btn-sm m-1">Discard changes</button>
+      <button class="btn btn-danger btn-sm m-1" data-bs-toggle="modal" data-bs-target="#discardChanges" >Discard changes</button>
       <button class="btn btn-success btn-sm m-1">Save changes</button>
     </div>
 
@@ -573,6 +573,28 @@
     <!-- Tabs content -->
   </div>
 </section>
+
+<!--Modals-->
+
+<div class="modal fade" id="discardChanges" tabindex="-1" aria-labelledby="discardChangesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="discardChangesLabel">Discard changes</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span> Are you sure you want to discard all changes ? </span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="key-detail.html" class="btn btn-primary">Yes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 <!-- Footer-->
