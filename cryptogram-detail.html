@@ -22,6 +22,8 @@
     <link href="lightbox2-2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!--    Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- DataTables -->
@@ -57,8 +59,8 @@
 <section class="page-section">
     <div class="container px-4 px-lg-4 w-75">
         <h2 class="text-center mt-0 text-primary py-5">MZV message No. 32/1944</h2>
-        <div class="d-flex justify-content-end">
-            <a href="cryptogram-detail-edit.html" class="btn btn-primary btn-sm m-1">Edit</a>
+        <div class="d-flex justify-content-end mx-5">
+            <a href="cryptogram-detail-edit.html" class="btn btn-primary btn-sm">Edit</a>
         </div>
 
         <div class="container text-start px-3 py-5">
@@ -69,7 +71,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-calendar-event"></i>
+                                    <i class="bi bi-calendar-event" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Dated</span>
@@ -91,7 +93,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <i class="bi bi-geo-alt-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Location</span>
@@ -113,7 +115,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-translate"></i>
+                                    <i class="bi bi-translate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Language</span>
@@ -135,7 +137,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-archive"></i>
+                                    <i class="bi bi-archive" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Availability</span>
@@ -157,7 +159,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-tags-fill"></i>
+                                    <i class="bi bi-tags-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Tags</span>
@@ -185,7 +187,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-folder"></i>
+                                    <i class="bi bi-folder" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Main category</span>
@@ -207,7 +209,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-1">
-                                    <i class="bi bi-folder-plus"></i>
+                                    <i class="bi bi-folder-plus" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-8">
                                     <span class="lead small icon-text">Subcategory</span>
@@ -225,57 +227,57 @@
                         </div>
                     </div>
 
-                    <div class="py-1 detail-param">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-1 merge-icons">
-                                        <i class="bi bi-envelope icon-envelope"></i>
-                                        <i class="bi bi-arrow-right icon-arrow"></i>
-                                </div>
-                                <div class="col-1">
-                                    <span class="lead small icon-text">Sender</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-1">
-                                </div>
-                                <div class="col-8">
-                                    <span class="lead small icon-text">abc</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="py-1 detail-param">-->
+<!--                        <div class="container">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-1 merge-icons">-->
+<!--                                        <i class="bi bi-envelope icon-envelope"></i>-->
+<!--                                        <i class="bi bi-arrow-right icon-arrow"></i>-->
+<!--                                </div>-->
+<!--                                <div class="col-1">-->
+<!--                                    <span class="lead small icon-text">Sender</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="container">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-1">-->
+<!--                                </div>-->
+<!--                                <div class="col-8">-->
+<!--                                    <span class="lead small icon-text">abc</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="py-1 detail-param">-->
+<!--                        <div class="container">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-1 merge-icons">-->
+<!--                                    <i class="bi bi-envelope icon-envelope"></i>-->
+<!--                                    <i class="bi bi-arrow-left icon-arrow"></i>-->
+<!--                                </div>-->
+<!--                                <div class="col-1">-->
+<!--                                    <span class="lead small icon-text">Recipient</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="container">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-1">-->
+<!--                            </div>-->
+<!--                            <div class="col-8">-->
+<!--                                <span class="lead small icon-text">abc</span>-->
+<!--                            </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="py-1 detail-param">
                         <div class="container">
                             <div class="row">
-                                <div class="col-1 merge-icons">
-                                    <i class="bi bi-envelope icon-envelope"></i>
-                                    <i class="bi bi-arrow-left icon-arrow"></i>
-                                </div>
                                 <div class="col-1">
-                                    <span class="lead small icon-text">Recipient</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-1">
-                            </div>
-                            <div class="col-8">
-                                <span class="lead small icon-text">abc</span>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="py-1 detail-param">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i class="bi bi-lightbulb"></i>
+                                    <i class="bi bi-lightbulb" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
                                 </div>
                                 <div class="col-1">
                                     <span class="lead small icon-text">Solution</span>
@@ -301,16 +303,14 @@
                             <div class="row">
                                 <div class="hover-mask d-flex align-items-center justify-content-center">
                                     <a href="#" title="">
-
-                                        <div class="gallery">
+                                        <div class="gallery img-zoom-container">
                                             <a href="assets/img/cryptogram1.jpg" title="Cryptogram detail photo"
                                                class="gallery-photo " data-lightbox="cryptogram-detail">
-                                                <img src="assets/img/cryptogram1.jpg" class="img-fluid rounded"
-                                                     alt=""/>
+                                                    <img src="assets/img/cryptogram1.jpg" class="img-fluid rounded"
+                                                         alt="" id="detail_photo"/>
+
                                             </a>
                                         </div>
-
-<!--                                        <h2><i class="bi bi-search glyphicon"></i></h2>-->
                                     </a>
                                 </div>
                             </div>
@@ -327,48 +327,56 @@
                         type="button" role="tab" aria-controls="description-tab-pane" aria-selected="true">Description</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="transcription-tab" data-bs-toggle="tab" data-bs-target="#transcription-tab-pane"
-                        type="button" role="tab" aria-controls="transcription-tab-pane" aria-selected="false">Transcription</button>
+                <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users-tab-pane"
+                        type="button" role="tab" aria-controls="users-tab-pane" aria-selected="false">Users</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="solution-tab" data-bs-toggle="tab" data-bs-target="#solution-tab-pane"
-                        type="button" role="tab" aria-controls="solution-tab-pane" aria-selected="false">Solution</button>
+                <button class="nav-link" id="cryptogram-tab" data-bs-toggle="tab" data-bs-target="#cryptogram-tab-pane"
+                        type="button" role="tab" aria-controls="cryptogram-tab-pane" aria-selected="false">Cryptogram</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="images-tab" data-bs-toggle="tab" data-bs-target="#images-tab-pane"
-                        type="button" role="tab" aria-controls="images-tab-pane" aria-selected="false">Images</button>
+                <button class="nav-link" id="links-tab" data-bs-toggle="tab" data-bs-target="#links-tab-pane"
+                        type="button" role="tab" aria-controls="links-tab-pane" aria-selected="false">Links and references</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="references-tab" data-bs-toggle="tab" data-bs-target="#references-tab-pane"
-                        type="button" role="tab" aria-controls="references-tab-pane" aria-selected="false">References</button>
+                <button class="nav-link" id="text-tab" data-bs-toggle="tab" data-bs-target="#text-tab-pane"
+                        type="button" role="tab" aria-controls="text-tab-pane" aria-selected="false">Text documents</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="documents-tab" data-bs-toggle="tab" data-bs-target="#documents-tab-pane"
-                        type="button" role="tab" aria-controls="documents-tab-pane" aria-selected="false">Documents</button>
+                <button class="nav-link" id="attachments-tab" data-bs-toggle="tab" data-bs-target="#attachements-tab-pane"
+                        type="button" role="tab" aria-controls="attachments-tab-pane" aria-selected="false">Attachments</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other-tab-pane"
                         type="button" role="tab" aria-controls="other-tab-pane" aria-selected="false">Other</button>
             </li>
         </ul>
-        <div class="tab-content p-5" id="cryptogramTabContent">
+        <div class="tab-content p-xl-5 p-lg-5 p-md-3 p-sm-1" id="cryptogramTabContent">
             <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
                  aria-labelledby="description-tab" tabindex="0">
                 MZV (Ministry of Foreign Affairs) message 32 from 1944 sent to Stockholm. Original document title:
                 "Nelúštiteľné telegramy - žiadosť opakovať".
             </div>
-            <div class="tab-pane fade" id="transcription-tab-pane" role="tabpanel" aria-labelledby="transcription-tab"
+            <div class="tab-pane fade" id="users-tab-pane" role="tabpanel" aria-labelledby="users-tab"
                  tabindex="0">
+
                 <div>
-                    <h6 class="py-1">Header transcription</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at imperdiet libero, eu suscipit lorem. Praesent erat metus, mollis a dictum sit amet, aliquam vel massa. Pellentesque gravida elit leo, a fringilla mauris posuere ac. Fusce tristique fermentum mauris, a elementum diam placerat nec. Nunc malesuada sem sit amet massa ultrices faucibus. Maecenas porta purus eget elementum hendrerit. Mauris eu libero condimentum, egestas lectus ac, eleifend nibh. Nunc et leo finibus, iaculis tortor non, ornare lectus. Maecenas faucibus blandit diam ut semper. Sed pulvinar neque eget elit posuere blandit.</p>
+                    <div class="py-4">
+                        <div class="d-flex justify-content-between">
+                            <h5><i class="bi bi-people"></i> Sender </h5>
+                        </div>
+                        <span>Amelie Elisabeth Landgravine of Hessen-Kassel</span>
+                    </div>
+                    <div class="py-4">
+                        <div class="d-flex justify-content-between">
+                            <h5><i class="bi bi-people"></i> Recepient</h5>
+                        </div>
+                        <span>Kaspar von Eberstein, Lennart Torstensson, Günterode</span>
+                    </div>
                 </div>
-                <div>
-                    <h6 class="py-1">Header transcription</h6>
-                    <p>Sed et varius dolor. Sed consequat ipsum ac magna aliquam condimentum a vitae massa. Sed auctor sed est a aliquam. Phasellus lobortis eget justo a condimentum. Phasellus quis posuere dui, nec tempus leo. Aenean cursus elit sit amet massa consectetur maximus. Sed tristique vel sem eget laoreet. Nam vestibulum, arcu at blandit tempus, magna metus commodo massa, ut malesuada lectus risus id ipsum. Aliquam ac pharetra quam, sed mattis nisl. Phasellus ac justo eget erat bibendum semper. Aenean dictum eros libero, sit amet sodales leo vulputate non. Proin fringilla sit amet arcu ut mattis. Integer quis viverra lorem. Pellentesque vestibulum augue diam, et efficitur nulla bibendum eget.</p>
-                </div>
+
             </div>
-            <div class="tab-pane fade" id="solution-tab-pane" role="tabpanel" aria-labelledby="solution-tab"
+            <div class="tab-pane fade" id="cryptogram-tab-pane" role="tabpanel" aria-labelledby="cryptogram-tab"
                  tabindex="0">
                 <div>
                     <h6 class="py-1">Header solution</h6>
@@ -379,7 +387,7 @@
                     <p>Sed et varius dolor. Sed consequat ipsum ac magna aliquam condimentum a vitae massa. Sed auctor sed est a aliquam. Phasellus lobortis eget justo a condimentum. Phasellus quis posuere dui, nec tempus leo. Aenean cursus elit sit amet massa consectetur maximus. Sed tristique vel sem eget laoreet. Nam vestibulum, arcu at blandit tempus, magna metus commodo massa, ut malesuada lectus risus id ipsum. Aliquam ac pharetra quam, sed mattis nisl. Phasellus ac justo eget erat bibendum semper. Aenean dictum eros libero, sit amet sodales leo vulputate non. Proin fringilla sit amet arcu ut mattis. Integer quis viverra lorem. Pellentesque vestibulum augue diam, et efficitur nulla bibendum eget.</p>
                 </div>
             </div>
-            <div class="tab-pane fade" id="images-tab-pane" role="tabpanel" aria-labelledby="images-tab"
+            <div class="tab-pane fade" id="links-tab-pane" role="tabpanel" aria-labelledby="links-tab"
                  tabindex="0">
                 <div class="row d-flex flex-wrap p-1">
                     <div class="col-3">
@@ -402,9 +410,9 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="references-tab-pane" role="tabpanel" aria-labelledby="references-tab"
+            <div class="tab-pane fade" id="text-tab-pane" role="tabpanel" aria-labelledby="text-tab"
                  tabindex="0">references</div>
-            <div class="tab-pane fade" id="documents-tab-pane" role="tabpanel" aria-labelledby="documents-tab"
+            <div class="tab-pane fade" id="attachments-tab-pane" role="tabpanel" aria-labelledby="attachments-tab"
                  tabindex="0">
                 <div>
                     <h6 class="py-1">Header document</h6>
@@ -439,5 +447,10 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+<script>
+    /* Initiate Magnify Function
+    with the id of the image, and the strength of the magnifier glass:*/
+    magnify(".lb-nav", 3);
+</script>
 </body>
 </html>

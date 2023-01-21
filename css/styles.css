@@ -11592,11 +11592,15 @@ li.paginate_button.page-item:hover{
   font-size: calc(var(--bs-body-font-size) / 1.3);
 }
 .detail-param{
-  transition: all .5s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.detail-param span{
+  font-size: 1rem;
 }
 
 .detail-param:hover, .detail-param:active {
-  transform: scale(1.3);
+  /*transform: scale(1.3);*/
   /*border: 1px solid var(--bs-secondary);*/
   /*border-radius: 0.3rem;*/
   /*background: white;*/
@@ -11616,100 +11620,21 @@ li.paginate_button.page-item:hover{
 .merge-icons .icon-envelope{
   line-height: inherit;
   position: absolute;
-  transform: scale(0.8) skew(35deg, -35deg);
+  transform: scale(1.3) translate(1rem, -1rem) rotate(-35deg);
+  /*transform: translate(1rem, 1rem) rotate(-40deg);*/
+  /*transform: rotate(-40deg);*/
+  /*transform-origin: 90% 40%;*/
+  /*-webkit-transform: translate(100%) rotate(90deg);*/
+  /*-webkit-transform-origin: left top;*/
+  /*transform: scale(1.5) rotateZ(-40deg) translateX(1.5rem);*/
 }
 
 .merge-icons .icon-arrow{
-  transform: scale(0.7) translate(50%, 60%);
+  /*transform: scale(calc(var(--bs-body-font-size) / 0.9));*/
+  /*transform: translate(80% 20%);*/
+  /*transform: scale(1) translate(3rem, 1.5rem);*/
 }
-/*!*ZoomIn Hover-Mask Effect*!*/
-/*.hover-mask > a {*/
-/*  display: block;*/
-/*  position: relative;*/
-/*  overflow: hidden;*/
-/*}*/
 
-/*.hover-mask img {*/
-/*  width: 100%;*/
-/*  height: auto;*/
-/*  -webkit-transition: all 0.5s ease-in-out;*/
-/*  -moz-transition: all 0.5s ease-in-out;*/
-/*  -o-transition: all 0.5s ease-in-out;*/
-/*  -ms-transition: all 0.5s ease-in-out;*/
-/*  transition: all 0.5s ease-in-out;*/
-/*}*/
-/*.hover-mask:hover img {*/
-/*  -webkit-transform: scale(1.2);*/
-/*  -moz-transform: scale(1.2);*/
-/*  -o-transform: scale(1.2);*/
-/*  -ms-transform: scale(1.2);*/
-/*  transform: scale(1.2);*/
-/*}*/
-/*.hover-mask a h2{*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  margin-top: 0;*/
-/*  margin-bottom: 0;*/
-/*  height: 100%;*/
-/*  width: 100%;*/
-/*  padding: 50%;*/
-/*  text-align: center;*/
-/*  background-color: rgba(0,0,0,0.4);*/
-/*  -webkit-transition: all 0.5s linear;*/
-/*  -moz-transition: all 0.5s linear;*/
-/*  -o-transition: all 0.5s linear;*/
-/*  -ms-transition: all 0.5s linear;*/
-/*  transition: all 0.5s linear;*/
-/*  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
-/*  filter: alpha(opacity=0);*/
-/*  opacity: 0;*/
-/*}*/
-/*.hover-mask:hover a h2 {*/
-/*  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";*/
-/*  filter: alpha(opacity=100);*/
-/*  opacity: 1;*/
-/*}*/
-/*.hover-mask .glyphicon {*/
-/*  -webkit-transform: scale(0);*/
-/*  -moz-transform: scale(0);*/
-/*  -o-transform: scale(0);*/
-/*  -ms-transform: scale(0);*/
-/*  transform: scale(0);*/
-/*  color: #fff;*/
-/*  -webkit-transition: all 0.5s linear;*/
-/*  -moz-transition: all 0.5s linear;*/
-/*  -o-transition: all 0.5s linear;*/
-/*  -ms-transition: all 0.5s linear;*/
-/*  transition: all 0.5s linear;*/
-/*  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
-/*  filter: alpha(opacity=0);*/
-/*  opacity: 0;*/
-/*}*/
-/*.hover-mask:hover .glyphicon {*/
-/*  -webkit-transform: scale(1);*/
-/*  -moz-transform: scale(1);*/
-/*  -o-transform: scale(1);*/
-/*  -ms-transform: scale(1);*/
-/*  transform: scale(1);*/
-/*  -webkit-transition: all 0.5s linear;*/
-/*  -moz-transition: all 0.5s linear;*/
-/*  -o-transition: all 0.5s linear;*/
-/*  -ms-transition: all 0.5s linear;*/
-/*  transition: all 0.5s linear;*/
-/*  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";*/
-/*  filter: alpha(opacity=1);*/
-/*  opacity: 1;*/
-/*}*/
-
-/*.glyphicon{*/
-/*  margin: auto;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-family: 'Glyphicons Halflings', serif !important;*/
-/*  font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*/
 
 
 .thumbnails {
@@ -11735,4 +11660,18 @@ li.paginate_button.page-item:hover{
 
 .div-white{
   background: white;
+}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
 }
