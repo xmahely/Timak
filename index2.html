@@ -8,7 +8,7 @@
   <title>Cryptograms</title>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Bootstrap Icons-->
+  <!-- Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- Font Awesome Icons-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -27,10 +27,23 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap5.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.dataTables.min.css"/>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.bootstrap5.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+  <!-- Tags -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+  <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+
 
 </head>
 <body id="page-top">
@@ -44,7 +57,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto my-2 my-lg-0">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#keysTable">Find cryptograms</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cyphersTable">Find cryptograms</a></li>
         <li class="nav-item"><a class="nav-link" href="https://hcportal.eu">HC portal</a></li>
         <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
       </ul>
@@ -108,106 +121,1058 @@
   </div>
 </section>
 
-<!--&lt;!&ndash; Cypher table&ndash;&gt;-->
-<!--<section class="page-section table-section" id="cypherTable">-->
-<!--  <div class="container px-4 px-lg-8">-->
-<!--    <div class="row align-items-center justify-content-center text-center">-->
-<!--      <div class="col-lg-8 align-self-end">-->
-<!--        <h1 class="font-weight-bold">All cryptograms</h1>-->
-<!--        <hr class="divider" />-->
-<!--      </div>-->
-<!--      <div class="col-lg-8 align-self-baseline py-5">-->
-<!--        <div class="table-responsive">-->
-<!--          <table id="keyTable" class="hover table table-sm">-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--              <th scope="col" class="th-sm">-->
-<!--                <span class="fs-6 fw-light text-uppercase" >Signature</span>-->
-<!--              </th>-->
-<!--              <th scope="col" class="th-sm">-->
-<!--                <span class="fs-6 fw-light text-uppercase">Language </span>-->
-<!--              </th>-->
-<!--              <th scope="col" class="th-sm">-->
-<!--                <span class="fs-6 fw-light text-uppercase" >Signature</span>-->
-<!--              </th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--            <tr>-->
-<!--              <td>-->
-<!--                <div class = "d-inline-flex align-items-center">-->
-<!--                  <div class="col-md-2 px-3">-->
-<!--                    <img src="assets/img/portfolio/thumbnails/2.jpg" alt="thumbnail1"-->
-<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
-<!--                  </div>-->
-<!--                  <div class="align-middle">-->
-<!--                    <a>hstam_4d_Nr_1218_Teil2_0303-0305</a>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </td>-->
-<!--              <td>Undefined</td>-->
-<!--              <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--              <td>-->
-<!--                <div class = "d-inline-flex align-items-center">-->
-<!--                  <div class="col-md-2 px-3">-->
-<!--                    <img src="assets/img/portfolio/thumbnails/3.jpg" alt="thumbnail1"-->
-<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
-<!--                  </div>-->
-<!--                  <div class="align-middle">-->
-<!--                    <a>hstam_4d_Nr_1218_Teil2_0193-0214</a>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </td>-->
-<!--              <td>Undefined</td>-->
-<!--              <td>from 28.3.1642</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--              <td>-->
-<!--                <div class = "d-inline-flex align-items-center">-->
-<!--                  <div class="col-md-2 px-3">-->
-<!--                    <img src="assets/img/portfolio/thumbnails/4.jpg" alt="thumbnail1"-->
-<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
-<!--                  </div>-->
-<!--                  <div class="align-middle">-->
-<!--                    <a>hstam_4d_Nr_1218_Teil1_0183-184</a>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </td>-->
-<!--              <td>French</td>-->
-<!--              <td>Row 1 Data 2</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--              <td>-->
-<!--                <div class = "d-inline-flex align-items-center">-->
-<!--                  <div class="col-md-2 px-3">-->
-<!--                    <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"-->
-<!--                         class="img-fluid rounded-circle shadow-4-strong">-->
-<!--                  </div>-->
-<!--                  <div class="align-middle">-->
-<!--                    <a>hstam_4d_Nr_1218_Teil1_0068-0072</a>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </td>-->
-<!--              <td>Undefined</td>-->
-<!--              <td>May 1639</td>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-<!--            <tfoot>-->
-<!--            <tr>-->
-<!--              <th>signature</th>-->
-<!--              <th>language</th>-->
-<!--              <th>date</th>-->
-<!--            </tr>-->
-<!--            </tfoot>-->
-<!--          </table>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<!-- Table Cyphers -->
+<section class="page-section table-section" id="cyphersTable">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center border">
 
+                <div class="col-lg-11 d-flex justify-content-between py-4">
+                    <h2 class="font-weight-bold">All cryptograms</h2>
+
+                    <div>
+                        <button type="button" class="btn btn-outline-primary btn-lg" id="simpleButton" onclick="showAdvancedTable()"><i class="bi bi-plus-lg"></i> More Filters <i class="bi bi-funnel-fill"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-lg-11 align-self-baseline py-1">
+                    <div class="table-responsive specialTable">
+                        <table id="cypherTable" class="hover table table-sm">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase">Name</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase">Language</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase">Date</span>
+                                </th>
+
+                            </tr>
+                            </thead>
+                            <tfoot style="display: table-header-group">
+                            <tr>
+                                <th>Name</th>
+                                <th>Language</th>
+                                <th>Date</th>
+
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/2.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>An encrypted postcard from the Isle of Wight</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/3.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>The Karl Dönitz Message</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> German </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1945 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/4.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>Enigma message P1030660</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>Cryptogams in the General Land Office of Texas</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1831 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 38026/1942</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1942 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class = "d-inline-flex align-items-center">
+                                        <div class="col-md-2 px-4">
+                                            <img src="assets/img/portfolio/thumbnails/5.jpg" alt="thumbnail1"
+                                                 class="img-fluid rounded-circle shadow-4-strong">
+                                        </div>
+                                        <div class="align-middle">
+                                            <a>MZV message No. 80338/1944</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section table-section" id="advancedCyphersTable">
+    <div class="container-costume">
+        <div class="row align-items-center justify-content-center text-center border">
+                <div class="col-lg-12 d-flex justify-content-between py-4">
+                    <h2 class="font-weight-bold">All cryptograms</h2>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary btn-lg" id="advancedButton"><i class="bi bi-dash-lg mx-1"></i>Less Filters <i class="bi bi-funnel-fill"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 align-self-baseline py-1">
+                    <div class="table-responsive specialTable">
+
+                        <table id="advancedCypherTable" class="hover table table-sm">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Name</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase">Category</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Availability</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Location</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Language</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Date</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Sender</span>
+                                </th>
+                                <th scope="col" class="th-sm">
+                                    <span class="fs-6 fw-bolder text-uppercase" >Recipient</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tfoot style="display: table-header-group">
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Availability</th>
+                                <th>Location</th>
+                                <th>Language</th>
+                                <th>Date</th>
+                                <th>Sender</th>
+                                <th>Recipient</th>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td> <div class="d-inline-flex align-items-center">
+                                            <a>An encrypted postcard from the Isle of Wight</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Substitution </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Dora Grumbridge </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>The Karl Dönitz Message</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> German </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1945 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Grand Admiral Dönitz </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Cryptogams in the General Land Office of Texas</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Substitution </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> The Southwestern Historical Quarterly Volume LXII, October 1958, No 2. </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> North America </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1831 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>MZV message No. 38026/1942</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak National Archive in Bratislava, f. MZV, box n. 41. </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1942 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Vyslanectvo Slovenskej Republiky v Budapešti </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> MZV Bratislava </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>MZV message No. 80338/1944</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak National Archive in Bratislava, f. MZV, box n. 42. </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slovak </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1944 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Tiso </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Slowakische Gesandtschaft Radensleben Neuruppin </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            <tr>
+                                <td> <div class = "d-inline-flex align-items-center">
+                                            <a>Enigma message P1030660</a>
+                                </div> </td>
+                                <td> <div class = "d-inline-flex align-items-center"> Rotorcipher </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Europe </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> English </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> AD 1905 </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                                <td> <div class = "d-inline-flex align-items-center"> Unknown </div></td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+<!--                    </div>-->
+        </div>
+    </div>
+</section>
+
+<!-- OffCanvas -->
+<div class="offcanvas offcanvas-start " tabindex="-1" id="dateSideBar" aria-labelledby="dateSideBar-label">
+    <div class="offcanvas-header align-items-center">
+        <h4 class="offcanvas-title" id="dateSideBar-label">Specify date range</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+        <div class="wrapperRange">
+            <div class="year-input">
+                <div class="field">
+                  <span>From</span>
+                  <input type="number" class="input-min" value="0">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                  <span>To</span>
+                  <input type="number" class="input-max" value="2030">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="progress"></div>
+            </div>
+            <div class="range-input">
+                <input type="range" class="range-min" min="0" max="2030" value="0" step="1">
+                <input type="range" class="range-max" min="0" max="2030" value="2030" step="1">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- OffCanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="tagsSideBar" aria-labelledby="tagsSideBar-label">
+    <div class="offcanvas-header align-items-center">
+        <h4 class="offcanvas-title" id="tagsSideBar-label">Pick from available tags </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <select name="tags" id="tags" multiple placeholder="Choose tags">
+            <option value="1">Old</option>
+            <option value="2">New</option>
+            <option value="3">Postcard</option>
+            <option value="4">Poem</option>
+            <option value="6">Investigation</option>
+            <option value="7">Newspaper</option>
+            <option value="8">World War I</option>
+            <option value="9">World War II</option>
+            <option value="10">Chronogram</option>
+            <option value="11">Pigpen</option>
+            <option value="12">Shorthand</option>
+        </select>
+    </div>
+</div>
 
 <!-- Footer-->
 <footer class="mt-auto bg-light py-5">
@@ -224,5 +1189,6 @@
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
 </body>
 </html>
