@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Add a Key</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="lightbox2-2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-shrink navbar-fixed py-3" id="secondaryNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="https://hcportal.eu">
+                <img src="assets/img/logo-small-v1.png" alt="HC portal logo" class="hc-logo logo-dark">
+            </a>
+            <a class="navbar-brand" href="cryptogram.html">Cryptograms</a>
+            <a class="navbar-brand" href="key.html">Cypher keys</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="cryptogram.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cryptogram.html#keysTable">Find cryptograms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="page-section">
+        <div class="mt-4 box">
+            <h1 class="mb-5 text-xl font-semibold text-center text-gray-900">Add a new cipher key</h1>
+            <form action="" method="POST" enctype="" class="">
+                <div class="container px-4">
+                    <div class="row gx-5">
+                        <div class="col-sm form-group">
+                            <label for="cipherType">Cipher Type</label>
+                            <select class="form-control" id="cipherType">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm form-group">
+                            <label for="keyType">Key Type</label>
+                            <select class="form-control" id="keyType">
+                                <option>e</option>
+                                <option>ed</option>
+                            </select>
+                        </div>
+                        <div class="col-sm form-group">
+                            <label for="language">Language</label>
+                            <select class="form-control" id="language">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="datepickerfrom">Used From</label>
+                            <input id="datepickerfrom" class="form-control" name="datepickerfrom" width="250"
+                                type="date" />
+                        </div>
+                        <div class="col-sm">
+                            <label for="datepickerto">Used To</label>
+                            <input id="datepickerto" class="form-control" name="to" width="250" type="date" />
+
+                        </div>
+                        <div class="col-sm">
+                            <label for="usedAround">Used Around</label>
+                            <input id="usedAround" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div id="users">
+                        <div class="row gx-5">
+                            <div class="col-sm">
+                                <label for="keyUser">Choose a Key user</label>
+                                <select class="form-control" id="keyUser">
+                                    <option>Unknown</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="col-sm">
+                                <label for="keyUserName">Or fill the name</label>
+                                <input id="keyUserName" class="form-control" type="text" placeholder="Unknown">
+                            </div>
+                            <div class="col-sm">
+                                <label for="submit"></label>
+
+                                <button id="addUser" type="button" class="btn btn-primary mb-2 form-control">Add a
+                                    User</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="folder">Folder</label>
+                            <input id="folder" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                        <div class="col-sm">
+                            <label for="signature">Signature</label>
+                            <input id="signature" class="form-control" type="text" placeholder="Unknown">
+
+                        </div>
+                        <div class="col-sm">
+                            <label for="groupID">Group ID</label>
+                            <input id="groupID" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="complete">Complete structure</label>
+                            <input id="complete" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="usedCharacters">Used Characters</label>
+                            <input id="usedCharacters" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="creationPlace">Choose a place of creation</label>
+                            <select class="form-control" id="creationPlace">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label for="creationPlaceName">Or fill the the place of creation</label>
+                            <input id="creationPlaceName" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="note">Note</label>
+                            <textarea class="form-control" id="note" row gx-5s="3"></textarea>
+                        </div>
+                    </div>
+                    <div id="images">
+                        <div class="row gx-5" id="images">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label for="image">Image</label>
+                                    <input type="file" class="form-control-file form-control" id="image">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <label for="imageStructure">Key structure on the image</label>
+                                <input id="imageStructure" class="form-control" type="text" placeholder="Unknown">
+                            </div>
+
+                            <div class="col-sm ">
+                                <label for="addImage"></label>
+                                <button id="addImage" type="button" class="btn btn-primary mb-2 form-control">Add an
+                                    Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <input class="btn btn-primary form-control" type="submit" value="Submit">
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="mt-auto bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy; 2022 - hcportal.eu</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        var imageLen = 1;
+        $("#addImage").click(function () {
+
+            imageLen = imageLen + 1;
+
+            //if(len>1)
+
+            $("#images").append('<div class="row gx-5" id="images">' +
+                '<div class="col-sm">' +
+                '<div class="form-group">' +
+                '<label for="image' + imageLen + '">Image</label>' +
+                '<input type="file" class="form-control-file form-control" id="image' + imageLen + '">' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-sm">' +
+                '<label for="imageStructure' + imageLen + '">Key structure on the image</label>' +
+                '<input id="imageStructure' + imageLen + '" class="form-control" type="text" placeholder="Unknown">' +
+                '</div>' +
+                '<div class="col-sm ">' +
+                '</div>' +
+                '</div>'
+
+            );
+        });
+
+
+        var userLen = 1;
+        $("#addUser").click(function () {
+
+            userLen = userLen + 1;
+
+            //if(len>1)
+
+            $("#users").append('<div class="row gx-5">' +
+                '<div class="col-sm">' +
+                '<label for="keyUser' + userLen + '">Choose a Key user</label>' +
+                '<select class="form-control" id="keyUser' + userLen + '">' +
+                '<option>Unknown</option>' +
+                '<option>2</option>' +
+                '</select>' +
+                '</div>' +
+                '<div class="col-sm">' +
+                '<label for="keyUserName' + userLen + '">Or fill the name</label>' +
+                '<input id="keyUserName' + userLen + '" class="form-control" type="text" placeholder="Unknown">' +
+                '</div>' +
+                '<div class="col-sm">' +
+
+                '</div>' +
+                '</div>'
+
+            );
+        });
+
+
+
+    </script>
+</body>
+
+</html>
