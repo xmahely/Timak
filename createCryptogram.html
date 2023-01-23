@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Add a Cryptogram</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="lightbox2-2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-shrink navbar-fixed py-3" id="secondaryNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="https://hcportal.eu">
+                <img src="assets/img/logo-small-v1.png" alt="HC portal logo" class="hc-logo logo-dark">
+            </a>
+            <a class="navbar-brand" href="cryptogram.html">Cryptograms</a>
+            <a class="navbar-brand" href="key.html">Cypher keys</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="cryptogram.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cryptogram.html#keysTable">Find cryptograms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="page-section">
+        <div class="mt-4 box">
+            <h1 class="mb-5 text-xl font-semibold text-center text-gray-900">Add a new Cryptogram</h1>
+            <form action="" method="POST" enctype="">
+                <div class="container px-4">
+                    <div class="row gx-5 ">
+                        <div class="col-sm form-group">
+                            <label for="name">Name</label>
+                            <input id="name" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                        <div class="col-sm form-group">
+                            <div class="form-group">
+                                <label for="thumbnail">Thumbnail</label>
+                                <input type="file" class="form-control-file form-control" id="thumbnail">
+                            </div>
+                        </div>
+                        <div class="col-sm form-group">
+                            <label for="date">Date</label>
+                            <input id="date" class="form-control" width="250" type="date" />
+                        </div>
+
+                    </div>
+
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="keyUser">Choose a Key Sender</label>
+                            <select class="form-control" id="keyUser">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label for="keyUserName">Or fill the name</label>
+                            <input id="keyUserName" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                        <div class="col-sm">
+                            <label for="availability">Availability</label>
+                            <input id="availability" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="keyUser">Choose a Key Recipient</label>
+                            <select class="form-control" id="keyUser">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label for="keyUserName">Or fill the name</label>
+                            <input id="keyUserName" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                        <div class="col-sm">
+                            <label for="solved">Solved</label>
+                            <select class="form-control" id="solved">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="language">Language</label>
+                            <select class="form-control" id="language">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label for="languageText">Or Fill the language</label>
+                            <input id="languageText" class="form-control" type="text" placeholder="Unknown">
+                        </div>
+                        <div class="col-sm">
+                            <label for="location">Location</label>
+                            <select class="form-control" id="location">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="category">Category</label>
+                            <select class="form-control" id="category">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm">
+                            <label for="tags">Tags</label>
+                            <select class="form-control" id="tags">
+                                <option>Unknown</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label for="tagsText">Or Fill Tags</label>
+                            <input id="tagsText" class="form-control" type="text" placeholder="Unknown">
+
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" row gx-5s="3"></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="addCrypto"></label>
+                                <button id="addCrypto" type="button" class="btn btn-primary mb-2 form-control">Add a
+                                    Cryptogram</button>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="addRef"></label>
+                                <button id="addRef" type="button" class="btn btn-primary mb-2 form-control">Add a
+                                    Link or Reference</button>
+                            </div>
+                        </div>
+
+                        <div class="col-sm ">
+                            <div class="form-group">
+                                <label for="addText"></label>
+                                <button id="addText" type="button" class="btn btn-primary mb-2 form-control">Add a
+                                    Text</button>
+                            </div>
+                        </div>
+                        <div class="col-sm ">
+                            <div class="form-group">
+                                <label for="addAttach"></label>
+                                <button id="addAttach" type="button" class="btn btn-primary mb-2 form-control">Add an
+                                    Attachment</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="groups">
+
+
+                    </div>
+
+
+                    <div class="row gx-5">
+                        <div class="col-sm">
+                            <label for="submit"></label>
+                            <input class="btn btn-primary form-control" type="submit" value="Submit" id="submit">
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="mt-auto bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy; 2022 - hcportal.eu</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        //addCryptoaddRefaddTextaddAttach
+        var cryptoLen = 1;
+        var refLen = 1;
+        var textLen = 1;
+        var attachLen = 1;
+        $("#addCrypto").click(function () {
+
+            cryptoLen = cryptoLen + 1;
+
+            //if(len>1)
+
+            $("#groups").append('<div class="border border-secondary rounded p-3 mb-4">'+
+                '<h5 class="mb-1 text-xl font-semibold text-center text-gray-900">Cryptogram</h3>'+
+                '<div class="row gx-5" id="cryptoRow' + cryptoLen + '">' +
+                '<div class="col-sm">' +
+                '<div class="form-group">' +
+                '<label for="cryptoImage' + cryptoLen + '">Image</label>' +
+                '<input type="file" class="form-control-file form-control" id="cryptoImage' + cryptoLen + '">' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row gx-5" id="cryptoTextRow' + cryptoLen + '">' +
+                '<div class="col-sm">' +
+                '<label for="cryptoText' + cryptoLen + '">Text</label>' +
+                '<textarea id="cryptoText' + cryptoLen + '" class="form-control" placeholder="Unknown" row gx-5s="3"></textarea>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+            );
+        });
+
+
+        var refLen = 1;
+        $("#addRef").click(function () {
+
+            refLen = refLen + 1;
+
+            //if(len>1)
+
+            $("#groups").append('<div class="border border-secondary rounded p-3 mb-4">'+
+                '<h5 class="mb-1 text-xl font-semibold text-center text-gray-900">Reference</h3>'+
+                '<div class="row gx-5" id="cryptoRow' + refLen + '">' +
+                '<div class="col-sm">' +
+                '<div class="form-group">' +
+                '<label for="refUrl' + refLen + '">Url</label>' +
+                '<input type="text" class="form-control-file form-control" id="refUrl' + refLen + '">' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row gx-5" id="refTextRow' + refLen + '">' +
+                '<div class="col-sm">' +
+                '<label for="refText' + refLen + '">Text</label>' +
+                '<textarea id="refText' + refLen + '" class="form-control" placeholder="Unknown" row gx-5s="3"></textarea>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+
+            );
+        });
+        $("#addText").click(function () {
+
+            textLen = textLen + 1;
+
+            //if(len>1)
+
+            $("#groups").append('<div class="border border-secondary rounded p-3 mb-4">'+
+                '<h5 class="mb-1 text-xl font-semibold text-center text-gray-900">Text</h3>'+
+                '<div class="row gx-5" id="textRow' + textLen + '">' +
+                '<div class="col-sm">' +
+                '<label for="refText' + textLen + '">Text</label>' +
+                '<textarea id="refText' + textLen + '" class="form-control" placeholder="Unknown" row gx-5s="3"></textarea>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+
+            );
+        });
+        $("#addAttach").click(function () {
+
+            attachLen = attachLen + 1;
+
+            //if(len>1)
+
+            $("#groups").append('<div class="border border-secondary rounded p-3 mb-4">'+
+                '<h5 class="mb-1 text-xl font-semibold text-center text-gray-900">Attachment</h3>'+
+                '<div class="row gx-5" id="attachRow' + attachLen + '">' +
+                '<div class="col-sm">' +
+                '<div class="form-group">' +
+                '<label for="attachImage' + attachLen + '">Image</label>' +
+                '<input type="file" class="form-control-file form-control" id="attachImage' + attachLen + '">' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+            '</div>'
+
+            );
+        });
+
+    </script>
+
+</html>
