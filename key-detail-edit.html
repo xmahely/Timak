@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Key detail</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+          rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+          rel="stylesheet" />
+    <link href="lightbox2-2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--    Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-shrink navbar-fixed py-3" id="secondaryNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="https://hcportal.eu">
+            <img src="assets/img/logo-small-v1.png" alt="HC portal logo" class="hc-logo logo-dark">
+        </a>
+        <a class="navbar-brand" href="cryptogram.html">Cryptograms</a>
+        <a class="navbar-brand" href="key.html">Cypher keys</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="cryptogram.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="cryptogram.html#keysTable">Find cryptograms</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="page-section">
+    <div class="container px-4 px-lg-4 w-75">
+        <h2 class="text-center mt-0 text-primary py-5">hstam_4d_Nr_1218_Teil2_0274-0302</h2>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-danger btn-sm m-1" data-bs-toggle="modal" data-bs-target="#discardChanges">Discard changes</button>
+            <button class="btn btn-success btn-sm m-1">Save changes</button>
+        </div>
+
+        <div class="container text-start px-3 py-5">
+            <div class="row">
+                <div class="col">
+
+                    <div class="py-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-calendar-event" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Dated</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <div class="form-outline nav nav-pills" role="tablist" id="datePicker">
+                                        <div class="col-10">
+                                            <span class="lead small icon-text py-4 ">Choose from 3 options:</span>
+                                        </div>
+
+
+                                        <div class="col-10">
+                                            <div class="p-1">
+                                                <button class="btn btn-primary btn-sm nav-link active icon-text pill-tab" type="button" data-bs-toggle="pill" role="tab"
+                                                        id="specificDate-tab"
+                                                        data-bs-target="#specificDate" aria-expanded="true"
+                                                        aria-controls="specificDate">I know only one date</button>
+                                            </div>
+                                            <div class="p-1">
+                                                <button class="btn btn-primary btn-sm nav-link icon-text pill-tab" type="button" data-bs-toggle="pill" role="tab"
+                                                        id="specificDateInterval-tab"
+                                                        data-bs-target="#specificDateInterval" aria-expanded="true"
+                                                        aria-controls="specificDateInterval">I know specific from and to dates</button>
+                                            </div>
+                                            <div class="p-1">
+                                                <button class="btn btn-primary btn-sm nav-link icon-text pill-tab" type="button" data-bs-toggle="pill" role="tab"
+                                                        id="notSpecificDate-tab"
+                                                        data-bs-target="#notSpecificDate" aria-expanded="false"
+                                                        aria-controls="notSpecificDate">Not sure about date</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-content col-10 py-2" id="date-picked">
+
+                                        <div class="tab-pane fade" id="notSpecificDate" role="tabpanel"
+                                             aria-labelledby="notSpecificDate-tab">
+                                            <div class="form-outline">
+                                                <label class="form-label d-flex justify-content-start" for="dateAround">Date text field</label>
+                                                <input type="text" id="dateAround" class="form-control form-control-sm" />
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="specificDateInterval" role="tabpanel"
+                                             aria-labelledby="specificDateInterval-tab">
+                                            <div class="form-outline">
+                                                <label class="form-label d-flex justify-content-start" for="dateFrom">Date from</label>
+                                                <input type="date" id="dateFrom" class="form-control form-control-sm" />
+                                            </div>
+                                            <div class="form-outline">
+                                                <label class="form-label d-flex justify-content-start" for="dateTo">Date to</label>
+                                                <input type="date" id="dateTo" class="form-control form-control-sm" />
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade show active" id="specificDate" role="tabpanel"
+                                             aria-labelledby="specificDate-tab">
+                                            <div class="form-outline">
+                                                <label class="form-label d-flex justify-content-start"  for="date">Date</label>
+                                                <input id="date" class="form-control form-control-sm" type="date" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-geo-alt-fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Location</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <input type="text" id="location" class="form-control form-control-sm" value="Europe" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-translate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Language</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <select class="form-select form-select-sm" id="language">
+                                        <option selected value="Slovak">Slovak</option>
+                                        <option value="English">English</option>
+                                        <option value="German">German</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+
+                    <div class="py-1  ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-lock" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Cipher type</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <select class="form-select form-select-sm" id="cipher_type">
+                                        <option selected value="Undefined">Undefined</option>
+                                        <option value="Nomenclator">Nomenclator</option>
+                                        <option value="Code">Code</option>
+                                        <option value="Simple Substitution">Simple substitution</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-1  ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-key" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Key type</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <select class="form-select form-select-sm" id="key_type">
+                                        <option selected value="e">e</option>
+                                        <option value="ed">ed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-1  ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-columns-gap" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Complete structure</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <input type="text" id="structure" class="form-control form-control-sm" value="Vndlg, 1fn"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-1  ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i class="bi bi-sort-alpha-down" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lorem impsum"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span >Used chars</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                </div>
+                                <div class="col-10 py-2">
+                                    <input type="text" id="chars" class="form-control form-control-sm" value="ndlg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="py-1">
+                        <div class="container">
+                            <div class="row">
+                                <div id="keyCarousel" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <a href="assets/img/key1.jpg" title="Key detail photo"
+                                               class="img-fluid" data-lightbox="key-detail">
+                                                <img src="assets/img/key1.jpg" class="img-fluid rounded"
+                                                     alt=""/>
+                                            </a>
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>First image label</h5>
+                                                <p>Content for image 1 </p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="assets/img/key2.jpg" title="Key detail 2 photo"
+                                               class="img-fluid" data-lightbox="key-detail">
+                                                <img src="assets/img/key2.jpg" class="img-fluid rounded"
+                                                     alt=""/>
+                                            </a>
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Second image label</h5>
+                                                <p>Content for image 2 </p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="assets/img/key3.jpg" title="Key detail 3 photo"
+                                               class="img-fluid" data-lightbox="key-detail">
+                                                <img src="assets/img/key3.jpg" class="img-fluid rounded"
+                                                     alt=""/>
+                                            </a>
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Third image label</h5>
+                                                <p>Content for image 3 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#keyCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#keyCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs navs -->
+        <ul class="nav nav-tabs" id="cryptogramTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-tab-pane"
+                        type="button" role="tab" aria-controls="description-tab-pane" aria-selected="true">Description</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users-tab-pane"
+                        type="button" role="tab" aria-controls="users-tab-pane" aria-selected="true">Users</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-tab" data-bs-toggle="tab" data-bs-target="#other-tab-pane"
+                        type="button" role="tab" aria-controls="other-tab-pane" aria-selected="false">Other</button>
+            </li>
+        </ul>
+        <div class="tab-content p-5" id="cryptogramTabContent">
+            <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
+                 aria-labelledby="description-tab" tabindex="0">
+                <div>
+<!--                    <div class="float-end">-->
+<!--                        <button class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Edit</button>-->
+<!--                    </div>-->
+                    <div class="py-4">
+                        <textarea class="form-control" id="description" name="description" rows="4">MZV (Ministry of Foreign Affairs) message 32 from 1944 sent to Stockholm. Original document title:"Nelúštiteľné telegramy - žiadosť opakovať".</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="users-tab-pane" role="tabpanel"
+                 aria-labelledby="users-tab" tabindex="0">
+                <div>
+                    <div class="py-4">
+                        <div class="d-flex justify-content-between">
+                            <h5><i class="bi bi-people"></i> Main users</h5>
+                            <div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#removeMainUser">
+                                    <i class="bi bi-trash"></i>Remove</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addMainUser">
+                                    <i class="bi bi-plus"></i>Add user</button>
+                            </div>
+                        </div>
+                        <span>Amelie Elisabeth Landgravine of Hessen-Kassel</span>
+                    </div>
+                    <div class="py-4">
+                        <div class="d-flex justify-content-between">
+                            <h5><i class="bi bi-people"></i> Other users</h5>
+                            <div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#removeOtherUser">
+                                    <i class="bi bi-trash"></i>Remove</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addOtherUser">
+                                    <i class="bi bi-plus"></i>Add user</button>
+                            </div>
+                        </div>
+                        <span>Kaspar von Eberstein, Lennart Torstensson, Günterode</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="other-tab-pane" role="tabpanel" aria-labelledby="other-tab"
+                 tabindex="0">other
+            </div>
+        </div>
+        <!-- Tabs content -->
+    </div>
+</section>
+
+<!--Modals-->
+
+<div class="modal fade" id="discardChanges" tabindex="-1" aria-labelledby="discardChangesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="discardChangesLabel">Discard changes</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span> Are you sure you want to discard all changes ? </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="key-detail.html" class="btn btn-primary">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="removeMainUser" tabindex="-1" aria-labelledby="removeMainUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="removeMainUserLabel">Remove main users</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label select-label">Choose users to delete</label>
+                <select class="select form-select form-select-sm" multiple>
+                    <option value="1">Amelie Elisabeth Landgravine of Hessen-Kassel</option>
+                    <option value="2">Test</option>
+                    <option value="3">Test 3</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Remove seleted users</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="removeOtherUser" tabindex="-1" aria-labelledby="removeOtherUserUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="removeOtherUserLabel">Remove other users</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label select-label">Choose users to delete</label>
+                <select class="select form-select form-select-sm" multiple>
+                    <option value="1">Kaspar von Eberstein</option>
+                    <option value="2">Lennart Torstensson</option>
+                    <option value="3">Günterode</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addMainUser" tabindex="-1" aria-labelledby="addMainUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addMainUserLabel">Add main user</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label select-label">Choose user to add</label>
+                <input type="text" id="new_main_user" class="form-control form-control-sm" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add user</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addOtherUser" tabindex="-1" aria-labelledby="addOtherUserUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addOtherUserLabel">Add other user</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label select-label">Choose user to add</label>
+                <input type="text" id="new_other_user" class="form-control form-control-sm" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add user</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer-->
+<footer class="mt-auto bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - hcportal.eu</div></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
