@@ -689,6 +689,7 @@ progress {
     max-width: 1450px;
   }
 }
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -11792,7 +11793,7 @@ input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
-input[type="range"]::-moz-range-thumb{
+input[type="range"]::-moz-range-thumb {
   height: 17px;
   width: 17px;
   border: none;
@@ -11800,5 +11801,5 @@ input[type="range"]::-moz-range-thumb{
   background: #17A2B8;
   pointer-events: auto;
   -moz-appearance: none;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
