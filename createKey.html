@@ -40,6 +40,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/RubaXa/Sortable/Sortable.min.js"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
     <section class="page-section">
         <div class="mt-4 box">
             <h1 class="mb-5 text-xl font-semibold text-center text-gray-900">Add a new cipher key</h1>
-            <form action="" method="POST" enctype="" class="">
+            <form action="" method="POST" enctype="" class="" id="form">
                 <div class="container px-4">
                     <div class="row gx-5">
                         <div class="col-sm form-group">
@@ -191,25 +192,21 @@
                         <div class="row gx-5" id="images">
                             <div class="col-sm">
                                 <div class="form-group">
-                                    <label for="image">Image</label>
-                                    <input type="file" class="form-control-file form-control" id="image">
+                                    <label for="imagesUpload">Images</label>
+                                    <input class="form-control" type="file" id="imagesUpload" multiple />
                                 </div>
                             </div>
-                            <div class="col-sm">
-                                <label for="imageStructure">Key structure on the image</label>
-                                <input id="imageStructure" class="form-control" type="text" placeholder="Unknown">
-                            </div>
 
-                            <div class="col-sm ">
-                                <label for="addImage"></label>
-                                <button id="addImage" type="button" class="btn btn-primary mb-2 form-control">Add an
-                                    Image</button>
-                            </div>
+
+                            
                         </div>
                     </div>
+                    <ul class="list-group" id="imagesOrder">
+
+                    </ul>
                     <div class="row gx-5">
                         <div class="col-sm">
-                            <input class="btn btn-primary form-control" type="submit" value="Submit">
+                            <input class="btn btn-primary form-control mt-1" type="submit" value="Submit">
                         </div>
                     </div>
 
@@ -257,35 +254,61 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
     <script>
-        var imageLen = 1;
-        $("#addImage").click(function () {
 
-            imageLen = imageLen + 1;
+        function getData(form) {
+            var formData = new FormData(form);
 
-            //if(len>1)
+            // iterate through entries...
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
 
-            $("#images").append('<div class="row gx-5" id="images">' +
-                '<div class="col-sm">' +
-                '<div class="form-group">' +
-                '<label for="image' + imageLen + '">Image</label>' +
-                '<input type="file" class="form-control-file form-control" id="image' + imageLen + '">' +
-                '</div>' +
-                '</div>' +
-                '<div class="col-sm">' +
-                '<label for="imageStructure' + imageLen + '">Key structure on the image</label>' +
-                '<input id="imageStructure' + imageLen + '" class="form-control" type="text" placeholder="Unknown">' +
-                '</div>' +
-                '<div class="col-sm ">' +
-                '</div>' +
-                '</div>'
+            // ...or output as an object
+            console.log(Object.fromEntries(formData));
+        }
 
-            );
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            getData(e.target);
+        });
+
+
+
+
+
+        Sortable.create(imagesOrder, {
+            animation: 100,
+            group: 'list-1',
+            draggable: '.list-group-item',
+            handle: '.list-group-item',
+            sort: true,
+            filter: '.sortable-disabled',
+            chosenClass: 'active'
+
+
+
+
+        });
+
+
+
+        document.getElementById('imagesUpload').addEventListener('change', () => {
+            var inp = document.getElementById('imagesUpload');
+            for (var i = 0; i < inp.files.length; ++i) {
+                var name = inp.files.item(i).name;
+                $("#imagesOrder").append(
+                    '<li class="list-group-item"><div class="row gx-5 d-flex align-items-center"><div class="col-sm-6 "><p class=" text-truncate mb-0">' + name + '</p></div><div class="col-sm-6"><input id="imageStructure" class="form-control" type="text" placeholder="Key structure on the image"></div></div></li>'
+
+                )
+            }
+
+
         });
 
 
         var userLen = 1;
         $("#addUser").click(function () {
-
+            console.log(("form").serializeArray())
             userLen = userLen + 1;
 
             //if(len>1)
